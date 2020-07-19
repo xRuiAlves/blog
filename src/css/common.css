@@ -1,0 +1,28 @@
+:root {
+    --color-primary: #5287c0;
+    --color-primary-light: #7fa5ce;
+    --color-primary-lighter: #cde5ff;
+    --color-primary-lighterer: #e7f2ff;
+    --color-secondary: #ffc857;
+    --color-secondary-light: #ffd480;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.emphasized-anchor {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.page-content {
+    margin: 0 auto;
+    width: 88%;
+    padding-bottom: 2.5em;
+}
+
+h2 ~ h2 {
+    margin-top: 2em;
+}
