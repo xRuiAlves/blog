@@ -1,0 +1,47 @@
+@import "common.css";
+
+.article header {
+    margin-bottom: 2.5em;
+}
+
+.article header h1.title {
+    margin-bottom: 0.2em;
+}
+
+.article header .date {
+    font-size: 1.1em;
+}
+
+.article p {
+    margin-bottom: 0.85rem;
+}
+
+.article h1 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.article h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.article pre {
+    background-color: var(--color-primary-lighterer);
+    font-family: monospace;
+}
+
+.article-item {
+    margin-bottom: 0.35em;
+}
+
+.article-item .date {
+    color: var(--color-primary-dark);
+    font-size: 1em;
+    margin-right: 0.75em;
+}
+
+.article-item .title {
+    text-decoration: underline;
+}

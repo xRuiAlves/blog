@@ -2,6 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
+import "../css/article.css";
+
 export default function Article({
     data,
 }) {
@@ -10,15 +12,17 @@ export default function Article({
 
     return (
         <Layout>
-            <div className="blog-post-container">
-                <div className="blog-post">
-                    <h1>{frontmatter.title}</h1>
-                    <h2>{frontmatter.date}</h2>
+            <div className="article-container">
+                <article className="article">
+                    <header>
+                        <h1 className="title">{frontmatter.title}</h1>
+                        <div className="date">{frontmatter.date}</div>
+                    </header>
                     <div
-                        className="blog-post-content"
+                        className="article-content"
                         dangerouslySetInnerHTML={{ __html: html }}
                     />
-                </div>
+                </article>
             </div>
         </Layout>
     );
