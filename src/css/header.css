@@ -2,9 +2,9 @@
 
 header#page_header {
     background-color: var(--color-primary);
-    padding: 1em;
-    padding-left: 6%;
-    padding-right: 6%;
+    padding: 1em 0;
+    padding-left: 10%;
+    padding-right: 10%;
     margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
@@ -33,6 +33,9 @@ header#page_header #copyright {
 @media only screen and (max-width: 576px) {
     header#page_header {
         justify-content: flex-start;
+        padding: 1em 0;
+        padding-left: 6%;
+        padding-right: 6%;
     }
     
     header#page_header h1 {

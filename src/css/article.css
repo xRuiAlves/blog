@@ -13,7 +13,7 @@
 }
 
 .article p {
-    margin-bottom: 0.85rem;
+    margin-bottom: 1.75rem;
 }
 
 .article h1 {
@@ -44,4 +44,21 @@
 
 .article-item .title {
     text-decoration: underline;
+}
+
+.article a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.article ul {
+    margin-top: -1em;
+}
+
+.article pre {
+    padding: 1rem;
+}
+
+.article code::after {
+    content: none;
 }
