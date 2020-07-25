@@ -3,6 +3,7 @@ module.exports = {
         title: "Rui Alves Blog",
         description: "Tech-related Blog",
         author: "Rui Alves",
+        siteUrl: "https://blog.ruialves.me/",
     },
     plugins: [
         "gatsby-plugin-react-helmet",
@@ -35,5 +36,6 @@ module.exports = {
                 icon: "src/images/logo.png", // This path is relative to the root of the site.
             },
         },
+        "gatsby-plugin-feed",
     ],
 };
