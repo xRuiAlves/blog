@@ -39,7 +39,7 @@
 .article-item .date {
     color: var(--color-primary-dark);
     font-size: 1em;
-    margin-right: 0.75em;
+    margin-right: 0.6em;
 }
 
 .article-item .title {
@@ -65,4 +65,19 @@
 
 .article code {
     background-color: var(--color-primary-lighterer);
+}
+
+
+@media only screen and (max-width: 576px) {
+    .article-item {
+        margin-top: 0.6em;
+    }
+
+    .article-item .date {
+        margin-right: 0.5em;
+    }
+    
+    .article-item .title {
+        text-decoration: none;
+    }
 }

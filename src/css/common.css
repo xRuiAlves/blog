@@ -14,8 +14,8 @@ a {
 }
 
 .emphasized-anchor {
+    color: var(--color-primary);
     text-decoration: underline;
-    font-weight: bold;
 }
 
 .page-content {
@@ -27,6 +27,8 @@ a {
 h2 ~ h2 {
     margin-top: 2em;
 }
+
+
 
 @media only screen and (max-width: 576px) {
     .page-content {
