@@ -62,3 +62,7 @@
 .article code::after {
     content: none;
 }
+
+.article code {
+    background-color: var(--color-primary-lighterer);
+}
