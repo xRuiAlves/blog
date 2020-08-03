@@ -24,7 +24,7 @@
 
 .article h2 {
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
 }
 
 .article pre {
@@ -66,7 +66,6 @@
 .article code {
     background-color: var(--color-primary-lighterer);
 }
-
 
 @media only screen and (max-width: 576px) {
     .article-item {

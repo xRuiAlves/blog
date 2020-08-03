@@ -14,7 +14,7 @@ In the last 4 months I've been less active, although I've been tackling problems
 
 Although there were many problems I enjoyed solving, I decided to pick two of them to share (not because they were particularly my favorites, but because they had something interesting by nature).
 
-### Problem 72 - Edit Distance [Hard]
+## Problem 72 - Edit Distance [Hard]
 
 ```
 Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2. 
@@ -43,7 +43,7 @@ else:
 
 After iterating the full matrix, the edit distance is the value at `M[word1.size-1, word2.size-1]`! The full solution may be found [here](https://github.com/xRuiAlves/leetcode/blob/master/Problems/72.%20Edit%20Distance/Solution.java).
 
-### Problem 210 - Course Schedule II [Medium]
+## Problem 210 - Course Schedule II [Medium]
 
 ```
 There are a total of n courses you have to take, labeled from 0 to n - 1.
