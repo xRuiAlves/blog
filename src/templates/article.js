@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 import "../css/article.css";
 
@@ -12,6 +13,7 @@ export default function Article({
 
     return (
         <Layout>
+            <SEO title={frontmatter.title} />
             <div className="article-container">
                 <article className="article">
                     <header>
