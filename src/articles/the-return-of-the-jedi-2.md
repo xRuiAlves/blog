@@ -8,7 +8,7 @@ Hey! This is the second part of a multi-part post. If you haven't already, feel 
 
 - Part 1 - [Boosting my chess club's website with Cloudflare and Heroku](https://blog.ruialves.me/the-return-of-the-jedi-1)
 - Part 2 - You're here!
-- Part 3 - Coming soon...
+- Part 3 - [Finally an Engineer and next steps](https://blog.ruialves.me/the-return-of-the-jedi-3)
 
 ---
 

@@ -8,7 +8,7 @@ I'm back! This is my first time writing something here in months since I haven't
 
 - Part 1 - You're here!
 - Part 2 - [Insights on my MSc Thesis](https://blog.ruialves.me/the-return-of-the-jedi-2)
-- Part 3 - Coming soon...
+- Part 3 - [Finally an Engineer and next steps](https://blog.ruialves.me/the-return-of-the-jedi-3)
 
 ---
 
