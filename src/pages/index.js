@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Welcome from "../components/welcome";
 import Articles from "../components/articles";
+import Inactive from "../components/inactive";
 
 config.autoAddCss = false;
 
@@ -17,6 +18,7 @@ const IndexPage = ({
 }) => (
     <Layout>
         <SEO title="Home" />
+        <Inactive />
         <Welcome />
         <Articles items={edges} />
     </Layout>

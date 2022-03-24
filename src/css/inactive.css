@@ -1,0 +1,9 @@
+.inactive {
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary-dark);
+    background-color: var(--color-primary-lighter);
+    border-radius: 10px;
+    padding: 0.6em 0.8em;
+    margin-top: 3em;
+    margin-bottom: 2.5em;
+}
