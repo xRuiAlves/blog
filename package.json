@@ -18,7 +18,7 @@
     "gatsby-plugin-sharp": "^2.2.13",
     "gatsby-remark-emoji": "0.0.3",
     "gatsby-source-filesystem": "^2.3.20",
-    "gatsby-transformer-remark": "^2.8.25",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.2.7",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
