@@ -79,4 +79,10 @@ const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))]
         padding: 0;
         list-style: none;
     }
+
+    @media (max-width: 600px) {
+        .posts {
+            gap: 0;
+        }
+    }
 </style>

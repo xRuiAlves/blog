@@ -75,4 +75,23 @@ const { post } = Astro.props;
         font-size: 0.975rem;
         line-height: 1.6;
     }
+
+    @media (max-width: 600px) {
+        .post-card {
+            padding: 20px 0;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid var(--border);
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .post-card:hover {
+            transform: none;
+        }
+
+        .post-card:has(a:focus-visible) {
+            outline-offset: 0;
+        }
+    }
 </style>

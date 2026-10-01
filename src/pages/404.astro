@@ -55,4 +55,10 @@ const recent = (await getPosts()).slice(0, 3);
         padding: 0;
         list-style: none;
     }
+
+    @media (max-width: 600px) {
+        .posts {
+            gap: 0;
+        }
+    }
 </style>
