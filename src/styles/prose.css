@@ -110,3 +110,17 @@
     border-bottom: 1px solid var(--border);
     text-align: left;
 }
+
+.prose .astro-code {
+    background-color: var(--code-bg);
+}
+
+.prose .astro-code,
+.prose .astro-code span {
+    color: var(--shiki-dark);
+}
+
+:root[data-theme="light"] .prose .astro-code,
+:root[data-theme="light"] .prose .astro-code span {
+    color: var(--shiki-light);
+}
