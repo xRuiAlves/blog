@@ -7,13 +7,25 @@ export interface Props {
     type?: "website" | "article";
     publishedTime?: Date;
     noindex?: boolean;
+    image?: string;
+    imageAlt?: string;
     jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description = SITE_DESCRIPTION, type = "website", publishedTime, noindex = false, jsonLd } = Astro.props;
+const {
+    title,
+    description = SITE_DESCRIPTION,
+    type = "website",
+    publishedTime,
+    noindex = false,
+    image = "/og.png",
+    imageAlt = SITE_NAME,
+    jsonLd,
+} = Astro.props;
 
 const fullTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = new URL(image, Astro.site);
 ---
 
 <title>{fullTitle}</title>
@@ -29,6 +41,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 <meta property="og:url" content={canonical}>
 <meta property="og:title" content={title ?? SITE_TITLE}>
 <meta property="og:description" content={description}>
+<meta property="og:image" content={imageUrl}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content={imageAlt}>
 {publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()}>}
 {type === "article" && <meta property="article:author" content={AUTHOR.url}>}
 <meta name="twitter:card" content="summary_large_image">

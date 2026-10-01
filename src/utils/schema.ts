@@ -39,6 +39,7 @@ export function postSchema(site: URL, post: Post): JsonLd[] {
             description: excerpt(post),
             url,
             mainEntityOfPage: url,
+            image: new URL(`/og/${post.id}.png`, site).href,
             datePublished: isoDate(post.data.date),
             dateModified: isoDate(post.data.date),
             inLanguage: "en",
