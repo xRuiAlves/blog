@@ -127,3 +127,14 @@ body::before {
         padding: 0 18px;
     }
 }
+
+@media (max-width: 600px) {
+    body::before {
+        position: absolute;
+        bottom: auto;
+        height: 420px;
+        background-position: center top;
+        -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent);
+        mask-image: linear-gradient(to bottom, #000 30%, transparent);
+    }
+}
