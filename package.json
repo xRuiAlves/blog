@@ -1,0 +1,19 @@
+{
+    "name": "blog",
+    "private": true,
+    "description": "Rui Alves's tech blog",
+    "type": "module",
+    "author": "Rui Alves",
+    "license": "MIT",
+    "engines": {
+        "node": ">=22.12.0"
+    },
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview"
+    },
+    "dependencies": {
+        "astro": "^7.3.5"
+    }
+}
