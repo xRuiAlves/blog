@@ -1,0 +1,208 @@
+---
+import { render } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { excerpt, formatDate, getPosts, isoDate, postUrl, readingTime, type Post } from "../utils/posts";
+import { postSchema } from "../utils/schema";
+import "../styles/prose.css";
+
+export async function getStaticPaths() {
+    const posts = await getPosts();
+    return posts.map((post, i) => ({
+        params: { slug: post.id },
+        props: { post, newer: posts[i - 1], older: posts[i + 1] },
+    }));
+}
+
+interface Props {
+    post: Post;
+    newer?: Post;
+    older?: Post;
+}
+
+const { post, newer, older } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+    title={post.data.title}
+    description={excerpt(post)}
+    type="article"
+    publishedTime={post.data.date}
+    image={`/og/${post.id}.png`}
+    imageAlt={post.data.title}
+    jsonLd={postSchema(Astro.site!, post)}
+>
+    <div class="container">
+        <a class="back" href="/">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            All posts
+        </a>
+        <article class="post card">
+            <header>
+                <p class="meta">
+                    <time datetime={isoDate(post.data.date)}>{formatDate(post.data.date)}</time>
+                    <span aria-hidden="true">·</span>
+                    <span>{readingTime(post)} min read</span>
+                </p>
+                <h1>{post.data.title}</h1>
+            </header>
+            <div class="prose">
+                <Content />
+            </div>
+        </article>
+        {(older || newer) && (
+            <nav class="pager" aria-label="More posts">
+                {older && (
+                    <a class="card older" href={postUrl(older)} rel="prev">
+                        <span class="label">Previous post</span>
+                        <span class="pager-title">{older.data.title}</span>
+                    </a>
+                )}
+                {newer && (
+                    <a class="card newer" href={postUrl(newer)} rel="next">
+                        <span class="label">Next post</span>
+                        <span class="pager-title">{newer.data.title}</span>
+                    </a>
+                )}
+            </nav>
+        )}
+    </div>
+</BaseLayout>
+
+<style>
+    .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin: 8px 0 18px;
+        color: var(--muted);
+        font-size: 0.9375rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .back svg {
+        width: 16px;
+        height: 16px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    @media (hover: hover) {
+        .back:hover {
+            color: var(--text);
+        }
+    }
+
+    .post {
+        padding: clamp(20px, 5vw, 48px);
+    }
+
+    header {
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9375rem;
+    }
+
+    h1 {
+        margin: 10px 0 0;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        text-wrap: balance;
+    }
+
+    .pager {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 20px;
+    }
+
+    .pager a {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 18px 22px;
+        color: var(--text);
+        text-decoration: none;
+        transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .newer {
+        grid-column: 2;
+        text-align: right;
+    }
+
+    .label {
+        color: var(--muted);
+        font-size: 0.8125rem;
+        font-weight: 500;
+    }
+
+    .pager-title {
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    @media (hover: hover) {
+        .pager a:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .post {
+            padding: 4px 0 0;
+            background-color: transparent;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        header {
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+        }
+
+        .pager {
+            grid-template-columns: 1fr;
+            gap: 0;
+            margin-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .pager a {
+            padding: 16px 0;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid var(--border);
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .pager a:hover {
+            transform: none;
+        }
+
+        .newer {
+            grid-column: auto;
+            grid-row: 1;
+            text-align: left;
+        }
+    }
+</style>

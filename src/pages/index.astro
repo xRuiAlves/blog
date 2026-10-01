@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import { getPosts } from "../utils/posts";
+import { blogSchema } from "../utils/schema";
+
+const posts = await getPosts();
+const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))];
+---
+
+<BaseLayout jsonLd={blogSchema(Astro.site!, posts)}>
+    <div class="container">
+        <section class="intro">
+            <h1>Blog</h1>
+            <p class="lede">
+                I'm <a href="https://ruialves.net/">Rui Alves</a>, a Staff Platform Engineer at Kevel based in Porto, Portugal.
+                Here you'll find articles about tech-related stuff I found interesting.
+            </p>
+            <p class="lede follow">To stay tuned, follow the <a href="/rss.xml">RSS feed</a>.</p>
+        </section>
+
+        {years.map((year) => (
+            <section class="year" aria-labelledby={`year-${year}`}>
+                <h2 id={`year-${year}`}>{year}</h2>
+                <ol class="posts">
+                    {posts
+                        .filter((post) => post.data.date.getUTCFullYear() === year)
+                        .map((post) => (
+                            <li>
+                                <PostCard post={post} />
+                            </li>
+                        ))}
+                </ol>
+            </section>
+        ))}
+    </div>
+</BaseLayout>
+
+<style>
+    .intro {
+        padding: 24px 0 16px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: clamp(2.5rem, 7vw, 3.5rem);
+        line-height: 1.05;
+        letter-spacing: -0.035em;
+    }
+
+    .lede {
+        max-width: 60ch;
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 1.125rem;
+    }
+
+    .follow {
+        margin-top: 10px;
+    }
+
+    .year {
+        margin-top: 40px;
+    }
+
+    .year h2 {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .posts {
+        display: grid;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    @media (max-width: 600px) {
+        .posts {
+            gap: 0;
+        }
+    }
+</style>

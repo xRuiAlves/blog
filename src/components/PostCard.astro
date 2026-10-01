@@ -1,0 +1,97 @@
+---
+import { excerpt, formatDate, isoDate, postUrl, readingTime, type Post } from "../utils/posts";
+
+interface Props {
+    post: Post;
+}
+
+const { post } = Astro.props;
+---
+
+<article class="post-card card">
+    <p class="meta">
+        <time datetime={isoDate(post.data.date)}>{formatDate(post.data.date)}</time>
+        <span aria-hidden="true">·</span>
+        <span>{readingTime(post)} min read</span>
+    </p>
+    <h3 class="title"><a href={postUrl(post)}>{post.data.title}</a></h3>
+    <p class="excerpt">{excerpt(post)}</p>
+</article>
+
+<style>
+    .post-card {
+        position: relative;
+        padding: 22px 24px;
+        transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .post-card:has(a:focus-visible) {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+    }
+
+    @media (hover: hover) {
+        .post-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+    }
+
+    .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.875rem;
+    }
+
+    .title {
+        margin: 6px 0 0;
+        font-size: 1.25rem;
+        line-height: 1.35;
+        letter-spacing: -0.01em;
+    }
+
+    .title a {
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    .title a:focus-visible {
+        outline: none;
+    }
+
+    .title a::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+    }
+
+    .excerpt {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 0.975rem;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+        .post-card {
+            padding: 20px 0;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid var(--border);
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .post-card:hover {
+            transform: none;
+        }
+
+        .post-card:has(a:focus-visible) {
+            outline-offset: 0;
+        }
+    }
+</style>
