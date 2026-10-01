@@ -17,10 +17,6 @@ const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))]
                 Here you'll find articles about tech-related stuff I found interesting.
                 To stay tuned, follow the <a href="/rss.xml">RSS feed</a>.
             </p>
-            <p class="notice">
-                This blog is currently <strong>inactive</strong>. I haven't felt a lot of motivation lately to write things up,
-                but hey, I may return sometime in the future! 🚀
-            </p>
         </section>
 
         {years.map((year) => (
@@ -57,21 +53,6 @@ const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))]
         margin: 16px 0 0;
         color: var(--muted);
         font-size: 1.125rem;
-    }
-
-    .notice {
-        margin: 20px 0 0;
-        padding: 14px 18px;
-        background-color: var(--surface);
-        border: 1px solid var(--border);
-        border-left: 3px solid var(--accent);
-        border-radius: 12px;
-        color: var(--muted);
-        font-size: 0.9375rem;
-    }
-
-    .notice strong {
-        color: var(--text);
     }
 
     .year {
