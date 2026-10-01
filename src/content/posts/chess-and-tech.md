@@ -35,7 +35,7 @@ I also [published this package on npm](https://www.npmjs.com/package/lichess-tou
 
 ---
 
-Regarding future plans, I'd like to add [engine](https://en.wikipedia.org/wiki/Chess_engine) analysis to my chess games page. I would also like to start contributing to the [Lichess organization](https://github.com/lichess-org/) (although I'm already a patron, I want to contribute with something other than my money :stuck_out_tongue:).
+Regarding future plans, I'd like to add [engine](https://en.wikipedia.org/wiki/Chess_engine) analysis to my chess games page. I would also like to start contributing to the [Lichess organization](https://github.com/lichess-org/) (although I'm already a patron, I want to contribute with something other than my money 😛).
 
 In the meantime, feel free to take a look at my games page and/or at the packages I published:
 

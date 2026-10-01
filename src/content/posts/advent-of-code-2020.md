@@ -54,7 +54,7 @@ T = 13 - 2 (mod 13) = 11 (mod 13)
 T = 19 - 3 (mod 19) = 16 (mod 19)
 ```
 
-Although after browing through the [AoC Reddit](https://www.reddit.com/r/adventofcode/) I found out that there were other ways of solving this, I'm absolutely sure this is the coolest one :sunglasses:
+Although after browing through the [AoC Reddit](https://www.reddit.com/r/adventofcode/) I found out that there were other ways of solving this, I'm absolutely sure this is the coolest one 😎
 
 ## Day 17: Conway Cubes
 

@@ -22,7 +22,7 @@ I decided to start an online course (so that I could learn about it in an "organ
 
 As suggested in the course's lectures, I'm trying to take notes regarding methodologies and tools in an organized way. For that, I've been using [Zim Wiki](https://zim-wiki.org/). It is pretty user friendly and has a small learning curve (in terms of syntax). Although the wiki has no backup mechanisms, I've implemented a small workaround using a Git repository and `anacron` to periodically "save" changes.
 
-I'm planning to dedicate some time to this and I'm aiming to finish the course within the next couple of months. Then it's time to test what I've learned in some CTFs! :smile:
+I'm planning to dedicate some time to this and I'm aiming to finish the course within the next couple of months. Then it's time to test what I've learned in some CTFs! 😄
 
 ## Improving my Chess Games app
 
@@ -41,7 +41,7 @@ I'm taking it quite seriously, and the preparation has consisted mostly in:
 - Analyzing my notes of **Past Interviews**, to get a grasp of what I did well and what I need to work on;
 - Taking some **Interview Simulations**, which have been of great help by training me on how to answer "unexpected questions" (a special thanks to my friend [Miguel](https://miguelpduarte.me/) for taking the time and patience to sit with me for a few hours).
 
-I hope everything goes well and that I have a good "Return on Investment" regarding my preparation! :smile:
+I hope everything goes well and that I have a good "Return on Investment" regarding my preparation! 😄
 
 ---
 

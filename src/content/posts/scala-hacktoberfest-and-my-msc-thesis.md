@@ -10,7 +10,7 @@ For a couple of months now, I've been wanting to learn `Scala`. I wanted to pick
 
 Right at the same time, I found out about [Code Wars](https://www.codewars.com/) (which is way too addictive incidentally) and start spitting out some cool one-liner solutions to the easier exercises while I got acquainted with the language. I also re-started [Advent of Code 2019](https://adventofcode.com/2019/), which has a few nice problems that were cool to learn some new Scala concepts.
 
-On another note, I decided to drop LeetCode's daily challenges, since most of them are repeated and/or a bit too easy. I guess I might come back to them during the next month's challenges if I start to miss them :stuck_out_tongue:
+On another note, I decided to drop LeetCode's daily challenges, since most of them are repeated and/or a bit too easy. I guess I might come back to them during the next month's challenges if I start to miss them 😛
 
 All in all, Scala seems to be pretty powerful and has a lot of ways of getting the same task done. As time goes by, I want to pivot towards the functional side of the scala spectrum as much as possible, since it was what got me into it in the first place.
 
