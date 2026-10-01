@@ -2,12 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostCard from "../components/PostCard.astro";
 import { getPosts } from "../utils/posts";
+import { blogSchema } from "../utils/schema";
 
 const posts = await getPosts();
 const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))];
 ---
 
-<BaseLayout>
+<BaseLayout jsonLd={blogSchema(Astro.site!, posts)}>
     <div class="container">
         <section class="intro">
             <h1>Blog</h1>
