@@ -6,7 +6,7 @@
     "author": "Rui Alves",
     "license": "MIT",
     "engines": {
-        "node": ">=22.12.0"
+        "node": ">=24"
     },
     "scripts": {
         "dev": "astro dev",

@@ -4,7 +4,7 @@ Source of my tech blog at [blog.ruialves.net](https://blog.ruialves.net). Built 
 
 ## Development
 
-Requires Node.js 22.12 or later.
+Requires Node.js 24 (LTS).
 
 ```sh
 npm install
