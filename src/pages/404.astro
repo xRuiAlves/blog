@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import { getPosts } from "../utils/posts";
+
+const recent = (await getPosts()).slice(0, 3);
+---
+
+<BaseLayout title="Page not found" description="This page does not exist.">
+    <div class="container">
+        <section class="intro">
+            <p class="code">404</p>
+            <h1>Page not found</h1>
+            <p class="lede">This page does not exist or has moved. <a href="/">See all posts</a>, or read one of the latest:</p>
+        </section>
+        <ol class="posts">
+            {recent.map((post) => (
+                <li>
+                    <PostCard post={post} />
+                </li>
+            ))}
+        </ol>
+    </div>
+</BaseLayout>
+
+<style>
+    .intro {
+        padding: 24px 0 28px;
+    }
+
+    .code {
+        margin: 0;
+        color: var(--accent);
+        font-family: var(--font-mono);
+        font-weight: 600;
+    }
+
+    h1 {
+        margin: 6px 0 0;
+        font-size: clamp(2.25rem, 6vw, 3rem);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+    }
+
+    .lede {
+        margin: 14px 0 0;
+        color: var(--muted);
+        font-size: 1.125rem;
+    }
+
+    .posts {
+        display: grid;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+</style>
