@@ -119,3 +119,9 @@ body::before {
     z-index: -1;
     background: var(--waves) center / cover no-repeat;
 }
+
+@media (max-width: 520px) {
+    .container {
+        padding: 0 14px;
+    }
+}

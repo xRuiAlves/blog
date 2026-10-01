@@ -1,0 +1,97 @@
+---
+import { render } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { excerpt, formatDate, getPosts, isoDate, readingTime, type Post } from "../utils/posts";
+import "../styles/prose.css";
+
+export async function getStaticPaths() {
+    const posts = await getPosts();
+    return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+interface Props {
+    post: Post;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={excerpt(post)}>
+    <div class="container">
+        <a class="back" href="/">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            All posts
+        </a>
+        <article class="post card">
+            <header>
+                <p class="meta">
+                    <time datetime={isoDate(post.data.date)}>{formatDate(post.data.date)}</time>
+                    <span aria-hidden="true">·</span>
+                    <span>{readingTime(post)} min read</span>
+                </p>
+                <h1>{post.data.title}</h1>
+            </header>
+            <div class="prose">
+                <Content />
+            </div>
+        </article>
+    </div>
+</BaseLayout>
+
+<style>
+    .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin: 8px 0 18px;
+        color: var(--muted);
+        font-size: 0.9375rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .back svg {
+        width: 16px;
+        height: 16px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    @media (hover: hover) {
+        .back:hover {
+            color: var(--text);
+        }
+    }
+
+    .post {
+        padding: clamp(20px, 5vw, 48px);
+    }
+
+    header {
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9375rem;
+    }
+
+    h1 {
+        margin: 10px 0 0;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        text-wrap: balance;
+    }
+</style>
