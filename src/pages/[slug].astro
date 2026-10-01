@@ -1,19 +1,24 @@
 ---
 import { render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { excerpt, formatDate, getPosts, isoDate, readingTime, type Post } from "../utils/posts";
+import { excerpt, formatDate, getPosts, isoDate, postUrl, readingTime, type Post } from "../utils/posts";
 import "../styles/prose.css";
 
 export async function getStaticPaths() {
     const posts = await getPosts();
-    return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+    return posts.map((post, i) => ({
+        params: { slug: post.id },
+        props: { post, newer: posts[i - 1], older: posts[i + 1] },
+    }));
 }
 
 interface Props {
     post: Post;
+    newer?: Post;
+    older?: Post;
 }
 
-const { post } = Astro.props;
+const { post, newer, older } = Astro.props;
 const { Content } = await render(post);
 ---
 
@@ -36,6 +41,22 @@ const { Content } = await render(post);
                 <Content />
             </div>
         </article>
+        {(older || newer) && (
+            <nav class="pager" aria-label="More posts">
+                {older && (
+                    <a class="card older" href={postUrl(older)} rel="prev">
+                        <span class="label">Previous post</span>
+                        <span class="pager-title">{older.data.title}</span>
+                    </a>
+                )}
+                {newer && (
+                    <a class="card newer" href={postUrl(newer)} rel="next">
+                        <span class="label">Next post</span>
+                        <span class="pager-title">{newer.data.title}</span>
+                    </a>
+                )}
+            </nav>
+        )}
     </div>
 </BaseLayout>
 
@@ -93,5 +114,57 @@ const { Content } = await render(post);
         line-height: 1.15;
         letter-spacing: -0.03em;
         text-wrap: balance;
+    }
+
+    .pager {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 20px;
+    }
+
+    .pager a {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 18px 22px;
+        color: var(--text);
+        text-decoration: none;
+        transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .newer {
+        grid-column: 2;
+        text-align: right;
+    }
+
+    .label {
+        color: var(--muted);
+        font-size: 0.8125rem;
+        font-weight: 500;
+    }
+
+    .pager-title {
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    @media (hover: hover) {
+        .pager a:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .pager {
+            grid-template-columns: 1fr;
+        }
+
+        .newer {
+            grid-column: auto;
+            grid-row: 1;
+            text-align: left;
+        }
     }
 </style>
