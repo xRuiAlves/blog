@@ -1,9 +1,96 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import { getPosts } from "../utils/posts";
+
+const posts = await getPosts();
+const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))];
 ---
 
 <BaseLayout>
     <div class="container">
-        <h1>Blog</h1>
+        <section class="intro">
+            <h1>Blog</h1>
+            <p class="lede">
+                I'm <a href="https://ruialves.net/">Rui Alves</a>, a Staff Platform Engineer at Kevel based in Porto, Portugal.
+                Here you'll find articles about tech-related stuff I found interesting.
+                To stay tuned, follow the <a href="/rss.xml">RSS feed</a>.
+            </p>
+            <p class="notice">
+                This blog is currently <strong>inactive</strong>. I haven't felt a lot of motivation lately to write things up,
+                but hey, I may return sometime in the future! 🚀
+            </p>
+        </section>
+
+        {years.map((year) => (
+            <section class="year" aria-labelledby={`year-${year}`}>
+                <h2 id={`year-${year}`}>{year}</h2>
+                <ol class="posts">
+                    {posts
+                        .filter((post) => post.data.date.getUTCFullYear() === year)
+                        .map((post) => (
+                            <li>
+                                <PostCard post={post} />
+                            </li>
+                        ))}
+                </ol>
+            </section>
+        ))}
     </div>
 </BaseLayout>
+
+<style>
+    .intro {
+        padding: 24px 0 16px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: clamp(2.5rem, 7vw, 3.5rem);
+        line-height: 1.05;
+        letter-spacing: -0.035em;
+    }
+
+    .lede {
+        max-width: 60ch;
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 1.125rem;
+    }
+
+    .notice {
+        margin: 20px 0 0;
+        padding: 14px 18px;
+        background-color: var(--surface);
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--accent);
+        border-radius: 12px;
+        color: var(--muted);
+        font-size: 0.9375rem;
+    }
+
+    .notice strong {
+        color: var(--text);
+    }
+
+    .year {
+        margin-top: 40px;
+    }
+
+    .year h2 {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .posts {
+        display: grid;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+</style>
