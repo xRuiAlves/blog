@@ -15,8 +15,8 @@ const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))]
             <p class="lede">
                 I'm <a href="https://ruialves.net/">Rui Alves</a>, a Staff Platform Engineer at Kevel based in Porto, Portugal.
                 Here you'll find articles about tech-related stuff I found interesting.
-                To stay tuned, follow the <a href="/rss.xml">RSS feed</a>.
             </p>
+            <p class="lede follow">To stay tuned, follow the <a href="/rss.xml">RSS feed</a>.</p>
         </section>
 
         {years.map((year) => (
@@ -53,6 +53,10 @@ const years = [...new Set(posts.map((post) => post.data.date.getUTCFullYear()))]
         margin: 16px 0 0;
         color: var(--muted);
         font-size: 1.125rem;
+    }
+
+    .follow {
+        margin-top: 10px;
     }
 
     .year {
