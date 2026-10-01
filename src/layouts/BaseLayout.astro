@@ -21,6 +21,14 @@ const fullTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{fullTitle}</title>
         <meta name="description" content={description}>
+        <meta name="theme-color" content="#0f1013">
+        <script is:inline>
+            try {
+                if (localStorage.getItem("theme") === "light") {
+                    document.documentElement.dataset.theme = "light";
+                }
+            } catch {}
+        </script>
     </head>
     <body>
         <a class="skip-link" href="#main">Skip to content</a>
