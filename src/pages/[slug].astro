@@ -166,8 +166,37 @@ const { Content } = await render(post);
     }
 
     @media (max-width: 600px) {
+        .post {
+            padding: 4px 0 0;
+            background-color: transparent;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        header {
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+        }
+
         .pager {
             grid-template-columns: 1fr;
+            gap: 0;
+            margin-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .pager a {
+            padding: 16px 0;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid var(--border);
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .pager a:hover {
+            transform: none;
         }
 
         .newer {
