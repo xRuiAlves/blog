@@ -7,12 +7,12 @@ title: "The Return of the Jedi - Part 1"
 I'm back! This is my first time writing something here in months since I haven't had much time (nor motivation, to be honest) recently since I've been focusing on my thesis and a couple other things. Nevertheless, I've got a bunch I want to write about, so I'll be breaking this post into different parts, so stay tuned!
 
 - Part 1 - You're here!
-- Part 2 - [Insights on my MSc Thesis](https://blog.ruialves.me/the-return-of-the-jedi-2)
-- Part 3 - [Finally an Engineer and next steps](https://blog.ruialves.me/the-return-of-the-jedi-3)
+- Part 2 - [Insights on my MSc Thesis](/the-return-of-the-jedi-2/)
+- Part 3 - [Finally an Engineer and next steps](/the-return-of-the-jedi-3/)
 
 ---
 
-For the past few years, I've been developing and maintaining my chess club's (Grupo de Xadrez do Porto) website in my free time, as I've mentioned in a [previous post](https://blog.ruialves.me/a-meteoric-regret). The website was developed using `Meteor` and features a bunch of information about the club's activities, players, and a few other things. I initially started by hosting it using `AWS` free tier, which offers a low-budget VPS. After the free tier terminated, the club decided to extend the `AWS` hosting for another year.
+For the past few years, I've been developing and maintaining my chess club's (Grupo de Xadrez do Porto) website in my free time, as I've mentioned in a [previous post](/a-meteoric-regret/). The website was developed using `Meteor` and features a bunch of information about the club's activities, players, and a few other things. I initially started by hosting it using `AWS` free tier, which offers a low-budget VPS. After the free tier terminated, the club decided to extend the `AWS` hosting for another year.
 
 In terms of domain management, the club has been renewing the same domain for years and years now. Initially, the domain was being managed at [dns.pt](https://www.dns.pt/pt/), which is terrible in terms of management flexibility. I "upgraded" the management to [dominios.pt](https://www.dominios.pt/) which, although it wasn't perfect, was surely a big improvement.
 

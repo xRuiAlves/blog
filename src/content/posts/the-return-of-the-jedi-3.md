@@ -6,8 +6,8 @@ title: "The Return of the Jedi - Part 3"
 
 This is the final part of a multi-part post. If you haven't already, feel free to check out the other parts:
 
-- Part 1 - [Boosting my chess club's website with Cloudflare and Heroku](https://blog.ruialves.me/the-return-of-the-jedi-1)
-- Part 2 - [Insights on my MSc Thesis](https://blog.ruialves.me/the-return-of-the-jedi-2)
+- Part 1 - [Boosting my chess club's website with Cloudflare and Heroku](/the-return-of-the-jedi-1/)
+- Part 2 - [Insights on my MSc Thesis](/the-return-of-the-jedi-2/)
 - Part 3 - You're here!
 
 ---
