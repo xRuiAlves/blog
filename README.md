@@ -1,6 +1,6 @@
 # Blog
 
-Source of my tech blog at [blog.ruialves.net](https://blog.ruialves.net). Built with [Astro](https://astro.build).
+Source of my tech blog at [blog.ruialves.net](https://blog.ruialves.net).
 
 ## Development
 
