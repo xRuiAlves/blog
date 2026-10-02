@@ -34,7 +34,7 @@ function plainText(markdown: string): string {
         .replace(/`([^`]*)`/g, "$1")
         .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
         .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
-        .replace(/^#+\s+/gm, "")
+        .replace(/^#+\s.*$/gm, "")
         .replace(/^\s*([-*+]|\d+\.)\s+/gm, "")
         .replace(/[*_~>]/g, "")
         .replace(/\s+/g, " ")
@@ -53,6 +53,17 @@ export function excerpt(post: Post, maxLength = 160): string {
     const text = plainText(post.body ?? "");
     if (text.length <= maxLength) {
         return text;
+    }
+    let sentences = "";
+    for (const sentence of text.split(/(?<=[.!?])\s+(?=[A-Z0-9"“(])/)) {
+        const next = sentences ? `${sentences} ${sentence}` : sentence;
+        if (next.length > maxLength) {
+            break;
+        }
+        sentences = next;
+    }
+    if (sentences.length >= 70) {
+        return sentences;
     }
     const cut = text.slice(0, maxLength);
     return cut.slice(0, cut.lastIndexOf(" ")).replace(/[\s,.;:!?-]+$/, "") + "…";
