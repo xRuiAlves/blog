@@ -62,7 +62,7 @@ export function excerpt(post: Post, maxLength = 160): string {
         }
         sentences = next;
     }
-    if (sentences.length >= 70) {
+    if (sentences.length >= 55) {
         return sentences;
     }
     const cut = text.slice(0, maxLength);
