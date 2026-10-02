@@ -10,7 +10,7 @@ The past few weeks I've been having fun coding stuff that automates some of the 
 
 ## Chess games page
 
-I started by making some changes to [my chess games page](https://chess.ruialves.me/). I had to fix some package vulnerabilities that introduced breaking changes. After some minor tweaks here and there, I also added a small section displaying my online ratings using the [Lichess API](https://lichess.org/api).
+I started by making some changes to my chess games page (chess website no longer active). I had to fix some package vulnerabilities that introduced breaking changes. After some minor tweaks here and there, I also added a small section displaying my online ratings using the [Lichess API](https://lichess.org/api).
 
 I already had a section featuring my over the board ratings, which was getting data from a [scraper and API](https://github.com/xRuiAlves/fide-ratings-scraper/) module I had developed to get ratings from FIDE's (the international chess federation) website since they don't expose a public API. However, some data appeared to be missing, so I decided to take a look at the scraper.
 
@@ -39,7 +39,7 @@ Regarding future plans, I'd like to add [engine](https://en.wikipedia.org/wiki/C
 
 In the meantime, feel free to take a look at my games page and/or at the packages I published:
 
-- [Chess games page](https://chess.ruialves.me/)
+- Chess games page (chess website no longer active)
 - [fide-ratings-scraper](https://www.npmjs.com/package/fide-ratings-scraper)
 - [lichess-tournament-creator](https://www.npmjs.com/package/lichess-tournament-creator)
 
