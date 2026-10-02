@@ -14,7 +14,7 @@ I had been using this functionality mostly to later import the match using [Lich
 
 Besides that, I fixed some small things here and there (mostly to improve UX a bit). I've also integrated [Google Analytics](https://analytics.google.com/) in the website, which was actually fairly straightforward since `Gatsby` (I'm using `Gatsby`, incidentally) features a plugin that automates most of this purpose. Although it provides some pretty cool insights, most of the stuff looks to me like a bunch of codswallop, to be honest 😅
 
-You can check this stuff out at a match's page on my chess website (no longer active).
+You could check this stuff out at a match's page on my [chess website](https://chess.ruialves.net/) (these features are no longer available).
 
 ## MSc Thesis
 

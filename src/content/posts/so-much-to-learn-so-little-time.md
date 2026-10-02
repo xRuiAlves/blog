@@ -26,7 +26,7 @@ I'm planning to dedicate some time to this and I'm aiming to finish the course w
 
 ## Improving my Chess Games app
 
-As I've mentioned in a previous blog post, I've created and am currently maintaining a Chess Games app (chess website no longer active) where I share all my past chess games, so that I can analyze them at any time, to better understand my mistakes and help me improve my game.
+As I've mentioned in a previous blog post, I've created and am currently maintaining a [Chess Games app](https://chess.ruialves.net/) where I share all my past chess games, so that I can analyze them at any time, to better understand my mistakes and help me improve my game.
 
 I had the idea of adding a chess engine live analysis to my board component to get an understanding of the computer's evaluation of given positions, while at the same time allowing the user to try on different possible moves on a given position. I'm currently working on this and I'm expecting to finish it within the next month!
 
