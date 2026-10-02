@@ -30,8 +30,3 @@ Post content.
 ```
 
 The post is published at `/<slug>/`. The build also makes its social preview image, RSS item and sitemap entry.
-
-## Deploy
-
-- Build command: `npm run build`
-- Output directory: `dist/`
