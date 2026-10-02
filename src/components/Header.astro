@@ -14,7 +14,7 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
         <nav aria-label="Main">
             <ul>
                 <li><a href="/" aria-current={path === "/" ? "page" : undefined}>Posts</a></li>
-                <li><a href="https://ruialves.net/">About</a></li>
+                <li><a href="https://ruialves.net/" rel="me">About</a></li>
                 <li class="rss"><a href="/rss.xml">RSS</a></li>
                 <li><ThemeToggle /></li>
             </ul>
