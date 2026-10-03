@@ -4,7 +4,7 @@ date: "2021-01-07"
 title: "Advent of Code 2020"
 ---
 
-[Advent of Code](https://adventofcode.com/) is a Christmas-theme programming competition that takes place every year during the first 25 days of December. Usually, it's your job to save Christmas!
+[Advent of Code](https://adventofcode.com/) is a Christmas-themed programming competition that takes place every year during the first 25 days of December. Usually, it's your job to save Christmas!
 
 I've been participating every year for the past five years, and I always end up getting addicted and spending a lot of time on the challenges, so this year I decided that I wouldn't be participating. Naturally, this resistance lasted a single day, and, except for day 1, I managed to solve all exercises in their publish-day.
 
@@ -54,7 +54,7 @@ T = 13 - 2 (mod 13) = 11 (mod 13)
 T = 19 - 3 (mod 19) = 16 (mod 19)
 ```
 
-Although after browing through the [AoC Reddit](https://www.reddit.com/r/adventofcode/) I found out that there were other ways of solving this, I'm absolutely sure this is the coolest one 😎
+Although after browsing through the [AoC Reddit](https://www.reddit.com/r/adventofcode/) I found out that there were other ways of solving this, I'm absolutely sure this is the coolest one 😎
 
 ## Day 17: Conway Cubes
 
@@ -62,7 +62,7 @@ Although not difficult, this challenge took [Conway's Game of Life](https://en.w
 
 ## Day 18: Operation Order
 
-This one consisted of evaluating a numeric expression. The twist is that operators have different levels of precedence, which was a bit counter-intuitive! I used a stack-based approach to solve it linearly, similarly to my solution for a [LeetCode Calculator Problem](https://leetcode.com/problems/basic-calculator-ii/) I had solved about a year.
+This one consisted of evaluating a numeric expression. The twist is that operators have different levels of precedence, which was a bit counter-intuitive! I used a stack-based approach to solve it linearly, similarly to my solution for a [LeetCode Calculator Problem](https://leetcode.com/problems/basic-calculator-ii/) I had solved about a year before.
 
 ## Day 23: Crab Cups
 
@@ -85,7 +85,7 @@ final val STEPS_DELTAS = Map(
 )
 ```
 
-However, a [friend of mine](https://hugopeixoto.net/articles/advent-of-code-2020-week-3-4.html) pointed me to an article that actually uses a lot let space with a slightly different representation:
+However, a [friend of mine](https://hugopeixoto.net/articles/advent-of-code-2020-week-3-4.html) pointed me to an article that actually uses a lot less space with a slightly different representation:
 
 ```scala
 final val STEPS_DELTAS = Map(
