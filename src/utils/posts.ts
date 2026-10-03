@@ -35,6 +35,7 @@ function plainText(markdown: string): string {
         .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
         .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
         .replace(/^#+\s.*$/gm, "")
+        .replace(/^\s*([-*_])\1{2,}\s*$/gm, "")
         .replace(/^\s*([-*+]|\d+\.)\s+/gm, "")
         .replace(/[*_~>]/g, "")
         .replace(/\s+/g, " ")
