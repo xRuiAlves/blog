@@ -20,7 +20,7 @@ Anyway, I think it should be alright if I share just a few insights. My work con
 
 That being said, my research in the past few months culminated in really-big-document-with-over-100-pages-dissertation and in the development of a [plugin package](https://pypi.org/project/django-cloud-deployer/) for `Python` that works on `Django` web applications. A quick disclaimer: the package itself is simply a proof of concept of my dissertation's key findings and still needs a lot of work in order to be fully robust, work with a multitude of cloud providers (at the moment, it only operates with `Azure` and `Heroku`), and to be of real use to the cloud development community. Additionally, I also synthesised a part of the key findings (mostly regarding traffic routing among distinct cloud service models) into a small scientific paper that should be published in a cloud-related conference in the near future (more on that later)!
 
-It is hard to work on other things while one is focused on something as "big" as an MSc thesis; However, in the meantime, I've finally picked up some motivation and started to add a couple of features to my [personal chess website](https://chess.ruialves.net/). Moreover, I've started to learn a bit about `Kubernetes`, something which has been in my backlog for ages now.
+It is hard to work on other things while one is focused on something as "big" as an MSc thesis; however, in the meantime, I've finally picked up some motivation and started to add a couple of features to my [personal chess website](https://chess.ruialves.net/). Moreover, I've started to learn a bit about `Kubernetes`, something which has been in my backlog for ages now.
 
 ---
 
