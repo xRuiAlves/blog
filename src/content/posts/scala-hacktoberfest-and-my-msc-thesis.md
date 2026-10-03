@@ -8,7 +8,7 @@ title: "Scala, Hacktoberfest and my MSc Thesis"
 
 For a couple of months now, I've been wanting to learn `Scala`. I wanted to pick up something in the functional programming spectrum, and Scala seemed like a very good choice (lots of support and documentation, cute syntax, ...). I was quickly amazed at how clean and tidy scala code looks. Moreover, I was pretty happy with the fact I could start by coding more OOP-java-like code (which is what I'm used to) and slowly pivot towards the functional side.
 
-Right at the same time, I found out about [Code Wars](https://www.codewars.com/) (which is way too addictive incidentally) and start spitting out some cool one-liner solutions to the easier exercises while I got acquainted with the language. I also re-started [Advent of Code 2019](https://adventofcode.com/2019/), which has a few nice problems that were cool to learn some new Scala concepts.
+Right at the same time, I found out about [Code Wars](https://www.codewars.com/) (which is way too addictive incidentally) and started spitting out some cool one-liner solutions to the easier exercises while I got acquainted with the language. I also re-started [Advent of Code 2019](https://adventofcode.com/2019/), which has a few nice problems that were cool to learn some new Scala concepts.
 
 On another note, I decided to drop LeetCode's daily challenges, since most of them are repeated and/or a bit too easy. I guess I might come back to them during the next month's challenges if I start to miss them 😛
 
@@ -30,6 +30,6 @@ I am quite happy with this topic, as it is a great opportunity to learn more abo
 
 ---
 
-The [SINF 2020 Programming Contest](https://www.hackerrank.com/sinf-2020-programming-contest/) (the first programming contest I've developed by myself) is starting tomorrow and will be up and running for 3 days, with new originals challenges every day! I'm planning to write a bit about it (and maybe discuss some of the problems) in the near future.
+The [SINF 2020 Programming Contest](https://www.hackerrank.com/sinf-2020-programming-contest/) (the first programming contest I've developed by myself) is starting tomorrow and will be up and running for 3 days, with new original challenges every day! I'm planning to write a bit about it (and maybe discuss some of the problems) in the near future.
 
 Cheers!
