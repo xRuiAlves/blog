@@ -8,7 +8,7 @@ It's been a while since I last wrote something, mainly because I've been dedicat
 
 ## Chess games page
 
-Chess matches annotations follow a specific standard called [PGN](http://www.saremba.de/chessgml/standards/pgn/pgn-complete.htm). Although my chess games pages already allowed exporting my games to this `PGN` format, it didn't follow the metadata standards and wasn't fully compatible with `PGN` readers. Thus, I took some time in adapting the "Export Game to `PGN`" functionality to ensure it followed the standard.
+Chess matches annotations follow a specific standard called [PGN](http://www.saremba.de/chessgml/standards/pgn/pgn-complete.htm). Although my chess games page already allowed exporting my games to this `PGN` format, it didn't follow the metadata standards and wasn't fully compatible with `PGN` readers. Thus, I took some time in adapting the "Export Game to `PGN`" functionality to ensure it followed the standard.
 
 I had been using this functionality mostly to later import the match using [Lichess](https://lichess.org/) so that I could analyse it. Since this takes a lot of clicks, I decided to also add an "Analyse with Lichess" functionality that uses the [Lichess API](https://lichess.org/api#operation/gameImport) to export the match and quickly analyse it (using Lichess' [Stockfish](https://stockfishchess.org/)).
 
