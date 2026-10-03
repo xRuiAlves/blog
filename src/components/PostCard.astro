@@ -15,7 +15,7 @@ const { post } = Astro.props;
         <span>{readingTime(post)} min read</span>
     </p>
     <h3 class="title"><a href={postUrl(post)}>{post.data.title}</a></h3>
-    <p class="excerpt">{excerpt(post)}</p>
+    <p class="excerpt">{excerpt(post, 280)}</p>
 </article>
 
 <style>
