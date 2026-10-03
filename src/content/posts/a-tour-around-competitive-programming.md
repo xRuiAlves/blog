@@ -60,6 +60,6 @@ The order in which nodes are visited using a depth-first search consists of a [T
 
 ---
 
-As of the of July 2020, I have solved **73 easy**, **152 medium** and **13 hard** problems. I'll keep solving problems from these monthly challenges for as long as I'm having fun with them - which will likely be for a long time.
+As of the end of July 2020, I have solved **73 easy**, **152 medium** and **13 hard** problems. I'll keep solving problems from these monthly challenges for as long as I'm having fun with them - which will likely be for a long time.
 
 Cheers!
