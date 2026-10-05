@@ -4,7 +4,7 @@ Source of my tech blog at [blog.ruialves.net](https://blog.ruialves.net).
 
 ## Development
 
-Requires Node.js 24 (LTS). `mise.toml` and `.nvmrc` pin it for mise and nvm, and `netlify.toml` pins it for Netlify.
+Requires Node.js 24 (LTS). `mise.toml` and `.nvmrc` pin it for mise and nvm, and Cloudflare Pages reads `.nvmrc` for its builds.
 
 ```sh
 npm install
