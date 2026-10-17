@@ -33,6 +33,8 @@ All my websites are hosted on [Netlify](https://www.netlify.com/), so moving the
 
 There were a couple of bumps on the road in generating the SSL/TLS certificates with [Let's Encrypt](https://letsencrypt.org/) through Netlify to get HTTPS going, but it eventually "magically" went through by clicking the "Retry" button enough times.
 
+> **Update (2026-10-17):** Shortly after writing this, I moved all my websites from Netlify to [CloudFlare Pages](https://pages.cloudflare.com/), so DNS, email and hosting now all live in CloudFlare and are managed from the same OpenTofu repository. The `chess` record below now points to a `pages.dev` address instead.
+
 Finally, I also took the opportunity to redesign all the websites I own (this time using "a bit" of AI help to get the pages elegant-looking and SEO working properly, as I'm **terrible** at all-things-frontend), and I'm pretty happy with how they turned out.
 
 ## Infrastructure as Code
